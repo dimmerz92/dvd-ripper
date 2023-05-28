@@ -1,4 +1,5 @@
 import subprocess
+import caffeine
 import sys
 import os
 
@@ -18,7 +19,7 @@ def run_command(command, wait=True, detach=False):
             sys.exit(-1)
 
 # LIST ALL DVD TITLES
-titlesCmd= "makemkvcon -r info disc:0 | grep MSG:3028 | awk -F ',' 'BEGIN {printf \"%-9s %-50s\n\", \"Title ID\", \"Information\"} {printf \"%-9d %-50s\n\", NR-1, $4 \" \" $5}'"
+titlesCmd="makemkvcon -r info disc:0 | grep MSG:3028 | awk -F ',' 'BEGIN {printf \"\%-9s \%-50s\\n\", \"Title ID\", \"Information\"} {printf \"\%-9d \%-50s\\n\", NR-1, $4 \" \" $5}'"
 print("Getting titles from DVD\n")
 run_command(titlesCmd)
 
