@@ -16,6 +16,13 @@ This script is optimised to run on a Mac, feel free to fork it and make it bette
 
 Keep in mind, this is a janky script that I wrote to be optimised for my particular situation, so it most definitely isn't perfect!
 
+## How do I use it?
+1. `python3 rip-disc.py`
+
+2. Follow the prompts
+
+3. That's it..
+
 ## How it works
 1. The script starts by using makemkvcon to read all the available titles and display them as an easy to read list in the terminal. The title ID column indicates the index by which each title is associated.
 
